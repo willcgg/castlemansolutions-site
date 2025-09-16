@@ -1,0 +1,63 @@
+<!-- apply.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply | Castleman Solutions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<img src="assets/logo.png" alt="Castleman Solutions Logo" class="logo">
+<nav>
+<a href="index.html">Home</a>
+<a href="jobs.html">Jobs</a>
+<a href="apply.html">Apply</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+
+<main>
+<h1>Apply Now</h1>
+<form action="https://formspree.io/f/xrbawevq" method="POST" class="application-form">
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name" required>
+
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+
+<label for="phone">Phone:</label>
+<input type="text" id="phone" name="phone" required>
+
+
+<label for="role">Role Applying For:</label>
+<input type="text" id="role" name="role" value="" required>
+
+
+<label for="cv">Upload CV:</label>
+<input type="file" id="cv" name="cv" required>
+
+
+<button type="submit">Submit Application</button>
+</form>
+</main>
+
+
+<footer>
+<p>© 2025 Castleman Solutions</p>
+</footer>
+
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const role = urlParams.get('role');
+if (role) {
+document.getElementById('role').value = role;
+}
+</script>
+</body>
+</html>
